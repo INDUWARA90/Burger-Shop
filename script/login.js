@@ -33,7 +33,7 @@ loginBtn.addEventListener('click', () => {
     nameElement.style.display = 'none';
     Forgot.style.display = 'block';
     createAccountBtn.style.display = 'none';
-
+    signBtn.style.display='block';
 
     const Password = password.value;
     const Email = email.value;
@@ -63,7 +63,7 @@ signBtn.addEventListener('click', () => {
     nameElement.style.display = 'block';
     Forgot.style.display = 'none';
     createAccountBtn.style.display = 'block';
-
+    signBtn.style.display='none';
 });
 //==================Create Account ========================
 createAccountBtn.addEventListener('click', () => {
