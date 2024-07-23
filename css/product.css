@@ -18,7 +18,7 @@ h1{
 }
 
 .container-product-catalog{
-    margin-top: 200px;
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -59,4 +59,8 @@ h1{
 
 .container-iteam{
     padding: 40px;
+}
+.container-media-icon i{
+       margin-left: 40px;
+       cursor: pointer; 
 }
