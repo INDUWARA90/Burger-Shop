@@ -64,3 +64,13 @@ h1{
        margin-left: 40px;
        cursor: pointer; 
 }
+
+.js-iteam-burgers,
+.js-iteam-submarine,
+.js-iteam-Fries,
+.js-iteam-Pasta,
+.js-iteam-Chicken,
+.js-iteam-Beverages{
+    display: grid;
+    place-content: center;
+}
