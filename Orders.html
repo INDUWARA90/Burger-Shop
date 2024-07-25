@@ -2,23 +2,21 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>products Page</title>
-    <!-- css -->
-    <link rel="stylesheet" href="css/product.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orders</title>
+
+    <!--  -->
+    <link rel="stylesheet" href="css/order.css">
     <!-- boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
     <!-- Remix Icon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
-
 </head>
 
 <body>
-
-
     <!-- navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -40,142 +38,54 @@
                     </li>
                 </ul>
                 <span class="navbar-text">
-
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">
+                            Search
+                        </button>
                     </form>
-
                 </span>
             </div>
         </div>
     </nav>
 
-    <h1 style="text-align: center; margin-top: 20px;">Product Catalog</h1>
 
-    <div class="container-product-catalog">
-        <div class="product">
-            <img src="asset/burgercatalog.jpg" alt="..." onclick="location.href=`#Burger`">
-            <p><a href="#Burger">Burgers</a></p>
-        </div>
-
-        <div class="product">
-            <img src="asset/submarinecatalog.jpg" alt="..." onclick="location.href=`#submarine`">
-            <p><a href="#submarine">Submarine</a></p>
-        </div>
-
-        <div class="product">
-            <img src="asset/friescatalog.jpg" alt="..." onclick="location.href=`#Fries`">
-            <p><a href="#Fries">Fries</a></p>
-        </div>
-        <div class="product">
-            <img src="asset/crispychickencatalog.jpg" alt="..." onclick="location.href=`#Chicken`">
-            <p style="margin-top: 19px;"><a href="#Chicken">Crispy Chicken</a></p>
-        </div>
-        <div class="product">
-            <img src="asset/pastacatalog.jpg" alt="..." onclick="location.href=`#Pasta`">
-            <p><a href="#Pasta">Pasta</a></p>
-        </div>
-
-        <div class="product">
-            <img src="asset/bevaragecatalog.avif" alt="..." onclick="location.href=`#Beverages`">
-            <p><a href="#Beverages">Bevarage</a></p>
-        </div>
-    </div>
+    <h1 style="text-align: center;font-size: 60px;margin-top: 50px;">Orders List</h1>
 
 
-    <!-- Burger section -->
-    <div class="container-food container" id="Burger">
-        <h1>Burgers Section</h1>
-        <div class="container-iteam">
-            <div class="row js-iteam-burgers">
-            </div>
-        </div>
-    </div>
-    <!-- submarine -->
-    <div class="container-food container" id="submarine">
-        <h1>Submarines Section</h1>
-        <div class="container-iteam">
-            <div class="row js-iteam-submarine">
+    <div class="container">
+        <div class="row ">
+            <div>
+                <div class="js-Orders "></div>
 
             </div>
         </div>
     </div>
 
 
-    <!-- Fries  -->
-    <div class="container-food container" id="Fries">
-        <h1>Fries Section</h1>
-        <div class="container-iteam">
-            <div class="row js-iteam-Fries">
-
-            </div>
-        </div>
-    </div>
-
-    <!-- Pasta  -->
-    <div class="container-food container" id="Pasta">
-        <h1>Pasta Section</h1>
-        <div class="container-iteam">
-            <div class="row js-iteam-Pasta">
-
-            </div>
-        </div>
-    </div>
 
 
-    <!-- Chicken-->
-    <div class="container-food container" id="Chicken">
-        <h1>Chicken Section</h1>
-        <div class="container-iteam">
-            <div class="row js-iteam-Chicken">
-
-            </div>
-        </div>
-    </div>
-
-    <!-- Beverages-->
-    <div class="container-food container" id="Beverages">
-        <h1>Beverages Section</h1>
-        <div class="container-iteam">
-            <div class="row js-iteam-Beverages">
-
-            </div>
-        </div>
-    </div>
 
     <!-- Footer -->
 
     <div class="container-fulid my-5 mb-1">
         <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
-
             <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
-
                 <div class="me-5">
                     <span>Get connected with us on social networks:</span>
                 </div>
 
-
-
                 <div class="container-media-icon d-flex">
-
                     <i class="ri-facebook-fill"></i>
                     <i class="ri-instagram-fill"></i>
                     <i class="ri-whatsapp-fill"></i>
-
                 </div>
-
             </section>
-
-
 
             <section class="">
                 <div class="container text-center text-md-start mt-5">
-
                     <div class="row mt-3">
-
                         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-
                             <h6 class="text-uppercase fw-bold">MOS Burger Shop</h6>
                             <hr class="mb-4 mt-0 d-inline-block mx-auto"
                                 style="width: 120px; background-color: #7c4dff; height: 2px" />
@@ -186,10 +96,7 @@
                             </p>
                         </div>
 
-
-
                         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-
                             <h6 class="text-uppercase fw-bold">Products</h6>
                             <hr class="mb-4 mt-0 d-inline-block mx-auto"
                                 style="width: 60px; background-color: #7c4dff; height: 2px" />
@@ -207,10 +114,7 @@
                             </p>
                         </div>
 
-
-
                         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-
                             <h6 class="text-uppercase fw-bold">Useful links</h6>
                             <hr class="mb-4 mt-0 d-inline-block mx-auto"
                                 style="width: 60px; background-color: #7c4dff; height: 2px" />
@@ -228,40 +132,35 @@
                             </p>
                         </div>
 
-
-
                         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
                             <h6 class="text-uppercase fw-bold">Contact</h6>
                             <hr class="mb-4 mt-0 d-inline-block mx-auto"
                                 style="width: 60px; background-color: #7c4dff; height: 2px" />
                             <p><i class="fas fa-home mr-3"></i>Panadura,Horana,Sri Lanka</p>
-                            <p><i class="fas fa-envelope mr-3"></i> induwaravishwakntha90@gmail.com</p>
+                            <p>
+                                <i class="fas fa-envelope mr-3"></i>
+                                induwaravishwakntha90@gmail.com
+                            </p>
                             <p><i class="fas fa-phone mr-3"></i> +94 77 8127850</p>
                             <p><i class="fas fa-print mr-3"></i> +94 76 5694015</p>
                         </div>
-
                     </div>
-
                 </div>
             </section>
-
-
 
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
                 © 2024 Copyright:
                 <span class="text-white" href="https://mdbootstrap.com/">Induwara vishwakantha</span>
             </div>
-
         </footer>
-
     </div>
-    <script type="module" src="script/product.js"></script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
+    <script src="script/order.js"></script>
 
 </body>
 

@@ -342,46 +342,6 @@ const BeveragesList = [
     }
 ];
 
-//================Order List ==================
-
-const OrderList=[
-    {
-        OrderID:'OR001',
-        CustomerTele:'077',
-        CustomerName:'Kamal',
-        OrderDate:'2024-02-02',
-        OrderTime:'09.30.30',
-        OredrTotal:20000,
-        OrderDiscount:10,
-        OrderIteams:
-                [{
-                    IteamCode:'B001',
-                    PriceForIteam:2000.00,
-                    Discount:0,
-                    Quantity:1
-                }]
-            
-    },
-    {
-        OrderID:'OR001',
-        CustomerTele:'077',
-        CustomerName:'Kamal',
-        OrderDate:'2024-02-02',
-        OrderTime:'09.30.30',
-        OredrTotal:20000,
-        OrderDiscount:10,
-        OrderIteams:
-                [{
-                    IteamCode:'B001',
-                    PriceForIteam:2000.00,
-                    Discount:0,
-                    Quantity:1
-                }]
-            
-    },
-
-];
-
 
 
 
