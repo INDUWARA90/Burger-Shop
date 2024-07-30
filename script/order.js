@@ -77,11 +77,12 @@ OrderList.forEach((order) => {
                 Customer Telephone number: <span>${order.CustomerTele}</span>  <br>
                 Order Date: <span>${order.OrderDate}</span><br>
                 OrderTime: <span>${order.OrderTime}</span><br>
-                OredrTotal: <span>${order.CustomerName}</span> <br>
+                OredrTotal: <span>${order.OredrTotal}</span> <br>
                 OrderDiscount: <span>${order.OrderDiscount}</span><br>
                 Total Amount : <span>${order.SubTot}</span>
                
              </p>
+             <button class="Delete-Order-btn">Delete Order</button>
       </div>
     </div>
     `;

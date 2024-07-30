@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Page</title>
+
+    <!-- boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!--  -->
+    <link rel="stylesheet" href="css/customer.css">
+
+</head>
+
+<body>
+    <!-- navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MOS Burger Shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center" style="margin-left: 40px;">
+                    <li class="nav-item" style="margin-left: 40px;">
+                        <a class="nav-link active" aria-current="page" href="index.html"><img src="asset/home-icon.png"
+                                alt="" style="width: 50px;"></a>
+                    </li>
+                    <li class="nav-item" style="margin-left: 40px;">
+                        <a class="nav-link" href="pos.html"><img src="asset/POS-icon.png" alt=""
+                                style="width: 50px;"></a>
+                    </li>
+                    <li class="nav-item" style="margin-left: 40px;">
+                        <a class="nav-link" href="customer.html"><img src="asset/iconcustomer-list.png" alt=""
+                                style="width: 50px;"></a>
+                    </li>
+                    <li class="nav-item" style="margin-left: 40px;">
+                        <a class="nav-link" href="Orders.html"><img src="asset/icon-order-list.png" alt=""
+                                style="width: 50px;"></a>
+                    </li>
+                    <li class="nav-item" style="margin-left: 40px;">
+                        <a class="nav-link" href="products.html"><img src="asset/product-list.png" alt=""
+                                style="width: 50px;"></a>
+                    </li>
+                    <li class="nav-item " style="margin-left: 40px;">
+                        <a class="nav-link" href="AddCustomer.html"><img src="asset/icons-add-user.png" alt=""
+                                style="width: 50px;"></a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <h1 style="text-align: center;margin-top: 40px;margin-bottom: 100px;">Customer List</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12	col-sm-6	col-md-4  col-lg-4 col-xl-4 col-xxl-3 m-3 ">
+                <div class="card" style="width: 21rem;">
+                    <h2 style="text-align: center;margin-top: 10px;">C0001</h2>
+                    <div class="card-body">
+
+                        <div class="card-text ">
+
+                            <div class="name about-customer">
+                                name: <input type="text" class="Name">
+                            </div>
+
+                            <div class="location about-customer">
+                                Location:<input type="text" class="location">
+                            </div>
+
+                            <div class="email about-customer">
+                                Email:<input type="text" class="email">
+                            </div>
+
+                            <div class="phonenumber about-customer">
+                                Phone Number:<input type="text" class="PhoneNumber">
+                            </div>
+
+                        </div>
+
+                        <div class="container-buttons">
+                            <button>Update</button>
+                            <button>Delete</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12	col-sm-6	col-md-4   col-lg-4 col-xl-4 col-xxl-3  m-3">
+                <div class="card" style="width: 21rem;">
+                    <h2 style="text-align: center;margin-top: 10px;">C0001</h2>
+                    <div class="card-body">
+
+                        <div class="card-text ">
+
+                            <div class="name about-customer">
+                                name: <input type="text" class="Name">
+                            </div>
+
+                            <div class="location about-customer">
+                                Location:<input type="text" class="location">
+                            </div>
+
+                            <div class="email about-customer">
+                                Email:<input type="text" class="email">
+                            </div>
+
+                            <div class="phonenumber about-customer">
+                                Phone Number:<input type="text" class="PhoneNumber">
+                            </div>
+
+                        </div>
+
+                        <div class="container-buttons">
+                            <button>Update</button>
+                            <button>Delete</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="script/customer.js"></script>
+</body>
+
+</html>

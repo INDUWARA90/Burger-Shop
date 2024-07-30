@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    outline: none;
+}
+
+
+.container-content{
+    display: flex;
+    position: relative;
+}
+
+.nav-box a{
+    color: black;
+    text-decoration: none;
+}
+
+.nav-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.slidebar{
+    border:none;
+    border-radius: 10px;
+    background-color: #DCC894;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    height: unset;
+}
+
+.icon{
+    margin-bottom: 70px;
+}
+
+
+.conatiner-Add-Customer{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    
+}
+
+.container-getting-info{
+    width: 80%;
+    border-radius: 15px;
+    padding: 50px;
+    background-color: #2C586E;
+}
+.container-getting-info input{
+    height: 45px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    
+}
+.container-getting-info p{
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.container-getting-info h2{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.Add-customer{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.Add-customer-btn{
+    height: 45px;
+    width: 200px;
+    border: none;
+    border-radius: 10px;
+    background-color: #DD9F52;
+    color: white;
+}
+
+.search-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-container input{
+    height: 45px;
+    width: 450px;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+.search-container button{
+    height: 45px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    background-color: #DD9F52;
+    color: white;
+}

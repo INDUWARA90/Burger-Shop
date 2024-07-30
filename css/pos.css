@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    outline: none;
+}
+
+
+.container-content{
+    display: flex;
+    position: relative;
+}
+
+.nav-box a{
+    color: black;
+    text-decoration: none;
+}
+
+.nav-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.slidebar{
+    border:none;
+    border-radius: 10px;
+    background-color: #DCC894;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    height: unset;
+}
+
+.icon{
+    margin-bottom: 70px;
+}
+
+
+.conatiner-show-product{
+    width: 100%;
+    display: flex;
+    
+    border-radius: 10px;
+}
+
+.products-section{
+    width: 60%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    
+}
+.Orders-section{
+    width: 40%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #2C586E;
+    
+}
+.containre-navigation-buttons{
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.containre-navigation-buttons button{
+    width: 110px;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background-color: red;
+
+}
+
+.container-trenz{
+    margin: 10px;
+  
+}
+.card img{
+    margin-top: -90px;
+}
+.card{
+    border-radius: 20px;
+    margin: 100px;
+}
+
+.card-body button{
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #f0880a;
+}
+
+.container-card{
+    height: unset;
+    width: fit-content;
+    margin-top: 100px;
+}
+.container-search input{
+    border-radius: 8px;
+    border: 1px solid white;
+    height: 45px;
+}
+.container-search button{
+    background-color: #f0880a;
+    color: white;
+    width: 100px;
+    height: 45px;
+    border-radius: 8px;
+    border: none;
+}
+
+.total-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.discount,
+.sub-total{
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-choose{
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+}
+.button-choose button{
+    width: 100px;
+    height: 45px;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+}
+
+.print-the-bill{
+    width: 70%;
+    margin-left: 20px;
+    height: 45px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    background-color: #DD9F52;
+}
+.bottom-V{
+    width: 35%;
+    bottom: 0;
+    position: absolute;
+    margin-bottom: 20px;
+}

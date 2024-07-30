@@ -74,3 +74,21 @@ h1{
     display: grid;
     place-content: center;
 }
+
+.btn-add-cart{
+    margin-top: 20px;
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: #FF9A02;
+
+}
+.card-body p{
+    margin-top: 80px;
+}
+
+.amount{
+    
+}
