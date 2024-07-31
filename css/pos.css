@@ -150,6 +150,17 @@
     border-radius: 10px;
 }
 
+.button-choose button:hover{
+    opacity: 0.7;
+}
+
+
+#Active{
+    opacity: 1;
+    background-color: #D9D9D9;
+    color: black;
+}
+
 .print-the-bill{
     width: 70%;
     margin-left: 20px;
@@ -160,9 +171,26 @@
     font-weight: bold;
     background-color: #DD9F52;
 }
+
+.print-the-bill:hover{
+    color: black;
+}
+
+.print-the-bill:active{
+    background-color: #D9D9D9;
+    color: black;
+}
+
 .bottom-V{
     width: 35%;
     bottom: 0;
     position: absolute;
     margin-bottom: 20px;
+}
+table{
+    font-size: smaller;
+}
+
+.remove-icon{
+    cursor: pointer;
 }

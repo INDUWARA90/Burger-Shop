@@ -3,6 +3,7 @@ const getPName=document.getElementById('ProductName');
 const getPPrice=document.getElementById('ProductPrice');
 const getPImage=document.getElementById('Productimage/path');
 const getPIngredients=document.getElementById('ProductIngredients');
+const getProductDiscount=document.getElementById('ProductDiscount');
 
 const addproductBtn=document.querySelector('.Add-product-btn');
 
@@ -23,7 +24,8 @@ addproductBtn.addEventListener('click',()=>{
         itemName:getPName.value ,
         price:getPPrice.value,
         image:`${getPImage.value}`,
-        ingredients:getPIngredients.value
+        ingredients:getPIngredients.value,
+        Discount:getProductDiscount.value
     }
 
     productListArray.push(obj);
@@ -35,7 +37,7 @@ addproductBtn.addEventListener('click',()=>{
     getPPrice.value = '';
     getPImage.value = '';
     getPIngredients.value = '';
-
+    getProductDiscount.value='';
 
 
 
@@ -64,10 +66,11 @@ productListArray.forEach((product, index) => {
     const name = product.itemName;
     const image = product.image;
     const price = product.price;
+    const discount = product.Discount;
     CusHtml += `
     <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-3 m-3 ">
         <div class="card" style="width: 21rem;">
-            <h2 style="text-align: center;margin-top: 10px;">Product ${index + 1}</h2>
+            <h2 style="text-align: center;margin-top: 10px;">B100${index + 1}</h2>
             <div class="card-body">
                 <div class="card-text ">
                     <div class="name about-customer">
@@ -81,6 +84,9 @@ productListArray.forEach((product, index) => {
                     </div>
                     <div class="phonenumber about-customer">
                         price: <input type="text" class="PhoneNumber" value="${price}" disabled>
+                    </div>
+                    <div class="discount about-customer">
+                        Discount: <input type="text" class="Discount" value="${discount}" disabled>
                     </div>
                 </div>
                 <div class="container-buttons">
@@ -117,6 +123,7 @@ function Update(event) {
         button.textContent = 'Update';
     }
 
+    
 }
 
 

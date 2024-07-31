@@ -376,7 +376,7 @@ function genarateList() {
                     </p>
                     
                 
-                    <button class="btn-add-cart">Add to cart</button>
+                    
                  </div>
              </div> 
         `;
@@ -397,7 +397,7 @@ function genarateList() {
                     <p class="card-text">
                         Amount : &nbsp&nbsp&nbsp&nbspRs.${R}.00
                     </p>
-                    <button class="btn-add-cart">Add to cart</button>
+                    
                  </div>
              </div> 
         `;
@@ -418,7 +418,7 @@ function genarateList() {
                     <p class="card-text">
                         Amount : &nbsp&nbsp&nbsp&nbspRs.${R}.00
                     </p>
-                    <button class="btn-add-cart">Add to cart</button>
+                    
                  </div>
              </div> 
         `;
@@ -439,7 +439,7 @@ function genarateList() {
                     <p class="card-text">
                         Amount : &nbsp&nbsp&nbsp&nbspRs.${R}.00
                     </p>
-                    <button class="btn-add-cart">Add to cart</button>
+                    
                  </div>
              </div> 
         `;
@@ -460,7 +460,7 @@ function genarateList() {
                     <p class="card-text">
                         Amount : &nbsp&nbsp&nbsp&nbspRs.${R}.00
                     </p>
-                    <button class="btn-add-cart">Add to cart</button>
+                    
                  </div>
              </div> 
         `;
@@ -475,13 +475,13 @@ function genarateList() {
         })
         BeveragesHTML += `
             <div class="card col-sm-12  mt-3  col-lg-4    col-md-3 " style="width: 18rem;">
-                <img src="asset/pepsi.png" class="card-img-top" alt="...">
+                
                 <div class="card-body">
                     <h5 class="card-title">${iteam.itemName}</h5>
                     <p class="card-text">
                         Amount : &nbsp&nbsp&nbsp&nbspRs.${R}.00
                     </p>
-                    <button class="btn-add-cart">Add to cart</button>
+                    
                  </div>
              </div> 
         `;

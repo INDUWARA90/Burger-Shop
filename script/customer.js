@@ -1,5 +1,6 @@
 
 //=========getting local storage info ================
+
 let CustomerListArray = JSON.parse(localStorage.getItem('CustomerListArray')) || [];
 
 const Customerlist = document.querySelector('.js-customers-list');
@@ -12,6 +13,7 @@ CustomerListArray.forEach((customer, index) => {
     const name = customer.name;
     const address = customer.address;
     const email = customer.email;
+    
     CusHtml += `
     <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-3 m-3 ">
         <div class="card" style="width: 21rem;">
@@ -96,3 +98,6 @@ document.querySelectorAll('.Update-Button').forEach(button => {
 document.querySelectorAll('.Delete-Button').forEach(button => {
     button.addEventListener('click', Delete);
 });
+
+
+
