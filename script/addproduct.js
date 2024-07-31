@@ -1,34 +1,86 @@
 
-//=========getting local storage info ================
-let CustomerListArray = JSON.parse(localStorage.getItem('CustomerListArray')) || [];
+const getPName=document.getElementById('ProductName');
+const getPPrice=document.getElementById('ProductPrice');
+const getPImage=document.getElementById('Productimage/path');
+const getPIngredients=document.getElementById('ProductIngredients');
 
-const Customerlist = document.querySelector('.js-customers-list');
+const addproductBtn=document.querySelector('.Add-product-btn');
+
+
+let productListArray=JSON.parse( localStorage.getItem('ProductList'))||[];
+
+
+function setLocalstorage() {
+   localStorage.setItem('ProductList',JSON.stringify(productListArray));     
+}
+
+
+
+addproductBtn.addEventListener('click',()=>{
+
+    const obj={
+
+        itemName:getPName.value ,
+        price:getPPrice.value,
+        image:`${getPImage.value}`,
+        ingredients:getPIngredients.value
+    }
+
+    productListArray.push(obj);
+
+    setLocalstorage();
+
+
+    getPName.value = '';
+    getPPrice.value = '';
+    getPImage.value = '';
+    getPIngredients.value = '';
+
+
+
+
+
+});
+
+
+function displaylocalstorageconsole() {
+    productListArray = JSON.parse(localStorage.getItem('ProductList')) || [];
+    window.addEventListener('load', console.log('product List Array Loaded from local storage:', productListArray));
+}
+
+displaylocalstorageconsole();
+
+
+
+
+const productslist = document.querySelector('.js-products-list');
 
 let CusHtml = '';
 
-CustomerListArray.forEach((customer, index) => {
+productListArray.forEach((product, index) => {
 
-    const phonenumber = customer.phoneNumber;
-    const name = customer.name;
-    const address = customer.address;
-    const email = customer.email;
+
+    const ingredients = product.ingredients;
+    const name = product.itemName;
+    const image = product.image;
+    const price = product.price;
     CusHtml += `
     <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-3 m-3 ">
         <div class="card" style="width: 21rem;">
-            <h2 style="text-align: center;margin-top: 10px;">C000${index + 1}</h2>
+            <h2 style="text-align: center;margin-top: 10px;">Product ${index + 1}</h2>
             <div class="card-body">
                 <div class="card-text ">
                     <div class="name about-customer">
                         name: <input type="text" class="Name" value="${name}" disabled>
                     </div>
                     <div class="location about-customer">
-                        Location: <input type="text" class="location" value="${address}" disabled>
+                        ingredients: <input type="text" class="location" value="${ingredients}" disabled>
                     </div>
                     <div class="email about-customer">
-                        Email: <input type="text" class="email" value="${email}" disabled>
+                        image: <input type="text" class="email" value="${image}" disabled>
                     </div>
                     <div class="phonenumber about-customer">
-                        Phone Number: <input type="text" class="PhoneNumber" value="${phonenumber}" disabled>
+                        price: <input type="text" class="PhoneNumber" value="${price}" disabled>
                     </div>
                 </div>
                 <div class="container-buttons">
@@ -41,7 +93,7 @@ CustomerListArray.forEach((customer, index) => {
     `;
 });
 
-Customerlist.innerHTML = CusHtml;
+productslist.innerHTML = CusHtml;
 
 //=================UPdate method=========================
 function Update(event) {
@@ -68,20 +120,14 @@ function Update(event) {
 }
 
 
-function u(event) {
-    const button=event.target;
-    
-}
-
-
 //=================delete method=========================
 function Delete(event) {
     const button = event.target;
     const index = button.getAttribute('data-index');
 
     
-    CustomerListArray.splice(index, 1);
-    localStorage.setItem('CustomerListArray', JSON.stringify(CustomerListArray));
+    productListArray.splice(index, 1);
+    localStorage.setItem('ProductList', JSON.stringify(productListArray));
 
     
     location.reload();
