@@ -1,88 +1,31 @@
 
 //================Order List ==================
-const OrderList = [
-    {
-        OrderID: 'OR001',
-        CustomerTele: '077',
-        CustomerName: 'Kamal',
-        OrderDate: '2024-02-02',
-        OrderTime: '09.30.30',
-        OredrTotal: 2000,
-        OrderDiscount: 10,
-        SubTot: 1900,
-        OrderIteams:
-            [{
-                IteamCode: 'B002',
-                PriceForIteam: 2000.00,
-                Discount: 0,
-                Quantity: 1
-            },
-            {
-                IteamCode: 'B002',
-                PriceForIteam: 2000.00,
-                Discount: 0,
-                Quantity: 1
-            }]
+let Orders = JSON.parse(localStorage.getItem('Orders')) || [];
 
-    },
-    {
-        OrderID: 'OR002',
-        CustomerTele: '077',
-        CustomerName: 'Kamal',
-        OrderDate: '2024-02-02',
-        OrderTime: '09.30.30',
-        OredrTotal: 2000,
-        OrderDiscount: 10,
-        SubTot: 1900,
-        OrderIteams:
-            [{
-                IteamCode: 'B001',
-                PriceForIteam: 2000.00,
-                Discount: 0,
-                Quantity: 1
-            }
-            ]
-
-    },
-
-];
+console.log(Orders);
 
 let OrderHTML = ``;
 
-let Ordertable = `
-     <details>
-                                <summary>Order Iteams</summary>
-                                <table class="table">
-                                    <thead>
-                                      <tr>
-                                        <th scope="col">IteamCode</th>
-                                        <th scope="col">Unit Price</th>
-                                        <th scope="col">Discount</th>
-                                        <th scope="col">Quantity</th>
-                                      </tr>
-                                    </thead>
-                           
-`;
 
 
 
-OrderList.forEach((order) => {
+Orders.forEach((order,index) => {
+
+
     OrderHTML += `
-    <div class="card">
+    <div class="card col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-3 m-3 "style="width:28rem" >
       <div class="card-body">
         <h5 class="card-title card-T">${order.OrderID}</h5>
             <p class="card-text card-b">
-
-                Customer Name: <span>${order.CustomerName}</span>  <br>
-                Customer Telephone number: <span>${order.CustomerTele}</span>  <br>
-                Order Date: <span>${order.OrderDate}</span><br>
-                OrderTime: <span>${order.OrderTime}</span><br>
-                OredrTotal: <span>${order.OredrTotal}</span> <br>
-                OrderDiscount: <span>${order.OrderDiscount}</span><br>
-                Total Amount : <span>${order.SubTot}</span>
-               
+                Order Date: <span>${order.date}</span><br>
+                OrderTime: <span>${order.time}</span><br>
+                OredrTotal: <span>${order.total}</span> <br>
+                OrderDiscount: <span>${order.discount}</span><br>
+                Total Amount : <span>${order.subtotal}</span>
+                
+                
              </p>
-             <button class="Delete-Order-btn">Delete Order</button>
+             <button class="Delete-Order-btn" data-index="${index++}">Delete Order</button>
       </div>
     </div>
     `;
@@ -91,6 +34,27 @@ OrderList.forEach((order) => {
 const OrdersElement = document.querySelector('.js-Orders');
 OrdersElement.innerHTML = OrderHTML;
 
+
+
+
+//=================delete method=========================
+function Delete(event) {
+    const button = event.target;
+    const index = button.getAttribute('data-index');
+
+    
+    Orders.splice(index, 1);
+    localStorage.setItem('Orders', JSON.stringify(Orders));
+
+    
+    location.reload();
+}
+
+
+// Attach event listeners
+document.querySelectorAll('.Delete-Order-btn').forEach(button => {
+    button.addEventListener('click', Delete);
+});
 
 
 

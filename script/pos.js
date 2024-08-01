@@ -13,12 +13,13 @@ const containerproduct = document.querySelector('.js-products-pos-section');
 
 let productListArray = JSON.parse(localStorage.getItem('ProductList')) || [];
 
+
 function showProduct(startIndex, endIndex) {
-    let html = '';
+    let Producthtml = '';
     for (let index = startIndex; index < endIndex; index++) {
         if (productListArray[index]) {
             const element = productListArray[index];
-            html += `
+            Producthtml += `
                 <div class="container-card">
                     <div class="card m-3" style="width: 12rem;">
                         <img src="${element.image}" class="card-img-top" alt="">
@@ -32,8 +33,15 @@ function showProduct(startIndex, endIndex) {
             `;
         }
     }
-    containerproduct.innerHTML = html;
+    containerproduct.innerHTML = Producthtml;
 }
+
+window.addEventListener('load',()=>{
+    showProduct(0, 10);
+
+    
+}) 
+
 
 //=================show products
 BuragerBtn.addEventListener('click', () => {
@@ -77,7 +85,7 @@ PastaBtn.addEventListener('click', () => {
 });
 
 ChickenBtn.addEventListener('click', () => {
-    showProduct(36,42);
+    showProduct(36, 42);
     BuragerBtn.disabled = false;
     SubmarinesBtn.disabled = false;
     FriesBtn.disabled = false;
@@ -87,7 +95,7 @@ ChickenBtn.addEventListener('click', () => {
 });
 
 Beavaragebtn.addEventListener('click', () => {
-    showProduct(42,46);
+    showProduct(42, 46);
     BuragerBtn.disabled = false;
     SubmarinesBtn.disabled = false;
     FriesBtn.disabled = false;
@@ -224,5 +232,81 @@ function calculateTotals() {
 updateTable();
 calculateTotals();
 
-//=================cash or card=========================
+//=================make Order=========================
 
+// Function to get and increment the order ID
+function getNextOrderId() {
+    let orderIdCounter = parseInt(localStorage.getItem('OrderIdCounter'), 10) || 0;
+    orderIdCounter++;
+    localStorage.setItem('OrderIdCounter', orderIdCounter);
+    return `OR${orderIdCounter.toString().padStart(4, '0')}`;
+}
+const printOrderID = document.querySelector('.Order-disply-ID');
+
+printOrderID.innerHTML = getNextOrderId();
+
+
+const printBillBtn = document.querySelector('.print-the-bill');
+
+function printBill() {
+
+    const order = {
+
+        OrderID: getNextOrderId(),
+        date:date(),
+        time:Time(),
+        items: Cart.map(item => ({
+            itemName: item.itemName,
+            qty: item.qty,
+            price: item.price,
+            totalPrice: (item.price * item.qty).toFixed(2)
+        })),
+        total: calculateTotal().toFixed(2),
+        discount: calculateDiscount().toFixed(2),
+        subtotal: calculateSubtotal().toFixed(2)
+    };
+
+    if (order) {
+        alert('empty')
+        return;
+    }
+
+    const orders = JSON.parse(localStorage.getItem('Orders')) || [];
+    orders.push(order);
+    localStorage.setItem('Orders', JSON.stringify(orders));
+
+    Cart = [];
+    setLocalstorage();
+    updateTable();
+    calculateTotals();
+
+    console.log('Order saved:', order);
+}
+
+function calculateTotal() {
+    return Cart.reduce((total, item) => total + (item.price * item.qty), 0);
+}
+function calculateDiscount() {
+    return Cart.reduce((discount, item) => discount + (item.price * item.qty * (item.Discount || 0) / 100), 0);
+}
+function calculateSubtotal() {
+    return calculateTotal() - calculateDiscount();
+}
+
+function date() {
+    const currentDate = new Date().toJSON().slice(0, 10);;
+    return currentDate;
+}
+
+
+function Time() {
+    const currentTime = new Date();
+
+    return currentTime.getHours()+`:`+currentTime.getMinutes()+`:`+currentTime.getSeconds();
+
+}
+
+printBillBtn.addEventListener('click',()=>{
+    
+    printBill();
+});
