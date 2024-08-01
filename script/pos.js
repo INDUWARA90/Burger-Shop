@@ -1,4 +1,330 @@
 
+
+// ============List of food==================
+const Products = [
+    {
+        itemName:'Classic Burger(Large)',
+        price: 750.00,
+        image:"asset/classicburger.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Classic Burger(Regular)',
+        price: 750.00,
+        image:"asset/classicburger.png",
+        ingredients: "",
+        Discount: 15
+    },
+    {
+        itemName:'Turkey Burger ',
+        price: 1600.00,
+        image:"asset/classicburger.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Chicken Burger (Large)',
+        price: 1400.00 ,
+        image:"asset/classicburger.png",
+        ingredients: "",
+        Discount: 15
+    },
+    {
+        itemName:'Chicken Burger (Regular)',
+        price: 800.00,
+        image:"asset/classicburger.png",
+        ingredients: "",
+        Discount: 20
+    },{
+        itemName:'Cheese Burger (Large)',
+        price: 1000.00,
+        image:"asset/classicburger.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Cheese Burger (Regular)',
+        price: 600.00,
+        image:"asset/classicburger.png",
+        ingredients: "",
+        Discount: 0
+    }
+    ,
+    {
+        itemName:'Bacon Burger',
+        price: 650.00,
+        image:"asset/classicburger.png",
+        ingredients: "",
+        Discount: 15
+    },
+    {
+        itemName:'Shawarma Burger',
+        price: 800.00,
+        image:"asset/classicburger.png",
+        ingredients: "",
+        Discount: 0
+    },{
+        itemName:'Olive Burger',
+        price: 1800.00,
+        image:"asset/classicburger.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Double-Cheese Burger',
+        price: 1250.00 ,
+        image:"asset/classicburger.png",
+        ingredients: "",
+        Discount: 20
+    },
+    {
+        itemName:'Crispy Chicken Burger (Regular)',
+        price: 1200.00,
+        image:"asset/classicburger.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Crispy Chicken Burger (Large)',
+        price: 1600.00,
+        image:"asset/classicburger.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Paneer Burger ',
+        price: 900.00,
+        image:"asset/classicburger.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Crispy Chicken Submarine (Large) ',
+        price: 2000.00 ,
+        image:"asset/Crispy Chicken Submarine.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Crispy Chicken Submarine (Regular)',
+        price: 1500.00,
+        image:"asset/Crispy Chicken Submarine.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Chicken Submarine (Large) ',
+        price: 1800.00 ,
+        image:"asset/Crispy Chicken Submarine.png",
+        ingredients: "",
+        Discount: 3
+    }
+    ,{
+        itemName:'Chicken Submarine (Regular)',
+        price: 1400.00 ,
+        image:"asset/Crispy Chicken Submarine.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Grinder Submarine',
+        price: 2300.00,
+        image:"asset/Crispy Chicken Submarine.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Cheese Submarine',
+        price: 2200.00,
+        image:"asset/Crispy Chicken Submarine.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Double Cheese n Chicken Submarine ',
+        price: 1900.00  ,
+        image:"asset/Crispy Chicken Submarine.png",
+        ingredients: "",
+        Discount: 16
+    },
+    {
+        itemName:'Special Horgie Submarine',
+        price: 2800.00,
+        image:"asset/Crispy Chicken Submarine.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'MOS Special Submarine',
+        price: 3000.00,
+        image:"asset/Crispy Chicken Submarine.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Steak Fries (Large) ',
+        price: 1200.00,
+        image:"asset/Steak Fries.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Steak Fries (Medium) ',
+        price: 600.00,
+        image:"asset/Steak Fries.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'French Fries (Large)',
+        price: 800.00 ,
+        image:"asset/Steak Fries.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'French Fries (Medium) ',
+        price: 650.00 ,
+        image:"asset/Steak Fries.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'French Fries (Small) ',
+        price: 450.00 ,
+        image:"asset/Steak Fries.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Sweet Potato Fries (Large)',
+        price: 600.00,
+        image:"asset/Steak Fries.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Chicken n Cheese Pasta ',
+        price: 1600.00,
+        image:"asset/Chicken n Cheese Pasta .png",
+        ingredients: "",
+        Discount: 15
+    },
+    {
+        itemName:'Chicken Penne Pasta ',
+        price: 1700.00,
+        image:"asset/Chicken n Cheese Pasta .png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Ground Turkey Pasta Bake ',
+        price: 2900.00 ,
+        image:"asset/Chicken n Cheese Pasta .png",
+        ingredients: "",
+        Discount: 10
+    },
+    {
+        itemName:'Creamy Shrimp Pasta',
+        price: 2000.00 ,
+        image:"asset/Chicken n Cheese Pasta .png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Lemon Butter Pasta ',
+        price: 1950.00 ,
+        image:"asset/Chicken n Cheese Pasta .png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Tagliatelle Pasta',
+        price:2400.00 ,
+        image:"asset/Chicken n Cheese Pasta .png",
+        ingredients: "",
+        Discount: 1
+    },
+    {
+        itemName:'Baked Ravioli ',
+        price:2000.00,
+        image:"asset/Chicken n Cheese Pasta .png",
+        ingredients: "",
+        Discount: 1
+    },
+    {
+        itemName:'Fried Chicken (Small)',
+        price:1200.00 ,
+        image:"asset/Fried Chicken.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Fried Chicken (Regular)',
+        price:2300.00 ,
+        image:"asset/Fried Chicken.png",
+        ingredients: "",
+        Discount: 10
+    },
+    {
+        itemName:'Fried Chicken (Large)',
+        price:3100.00,
+        image:"asset/Fried Chicken.png",
+        ingredients: "",
+        Discount: 15
+    },
+    {
+        itemName:'Hot Wings (Large)',
+        price:2400.00,
+        image:"asset/Fried Chicken.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Devilled Chicken (Large) ',
+        price:900.00,
+        image:"asset/Fried Chicken.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'BBQ Chicken (Regular) ',
+        price:2100.00 ,
+        image:"asset/Fried Chicken.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Pepsi (330ml)',
+        price:990.00 ,
+        image:"asset/pepsi.png",
+        ingredients: "",
+        Discount: 5
+    },
+    {
+        itemName:'Coca-Cola (330ml)',
+        price:1230.00,
+        image:"asset/Coca-Cola.png",
+        ingredients: "",
+        Discount: 0
+    },
+    {
+        itemName:'Sprite (330ml)',
+        price:1500.00,
+        image:"asset/Sprite .png",
+        ingredients: "",
+        Discount: 3
+    },
+    {
+        itemName:'Mirinda (330ml)',
+        price:990.00 ,
+        image:"asset/Mirinda .png",
+        ingredients: "",
+        Discount: 7
+    },
+];
+
 //=================buttons=========================
 const OrderID = document.querySelector('.Order_ID');
 
@@ -17,8 +343,8 @@ let productListArray = JSON.parse(localStorage.getItem('ProductList')) || [];
 function showProduct(startIndex, endIndex) {
     let Producthtml = '';
     for (let index = startIndex; index < endIndex; index++) {
-        if (productListArray[index]) {
-            const element = productListArray[index];
+        if (productListArray[index]||Products[index]) {
+            const element = productListArray[index]||Products[index];
             Producthtml += `
                 <div class="container-card">
                     <div class="card m-3" style="width: 12rem;">
@@ -110,7 +436,7 @@ Beavaragebtn.addEventListener('click', () => {
 function Addproduct(event) {
     const button = event.target;
     const itemId = button.getAttribute('data-index');
-    const product = productListArray[itemId];
+    const product = productListArray[itemId]||Products[itemId];
 
     if (product) {
         Cart.push({ ...product, qty: 1 });
@@ -231,6 +557,8 @@ function calculateTotals() {
 
 updateTable();
 calculateTotals();
+console.log(Cart);
+
 
 //=================make Order=========================
 
@@ -252,6 +580,7 @@ function printBill() {
 
     const order = {
 
+
         OrderID: getNextOrderId(),
         date:date(),
         time:Time(),
@@ -265,11 +594,6 @@ function printBill() {
         discount: calculateDiscount().toFixed(2),
         subtotal: calculateSubtotal().toFixed(2)
     };
-
-    if (order) {
-        alert('empty')
-        return;
-    }
 
     const orders = JSON.parse(localStorage.getItem('Orders')) || [];
     orders.push(order);
@@ -306,7 +630,4 @@ function Time() {
 
 }
 
-printBillBtn.addEventListener('click',()=>{
-    
-    printBill();
-});
+printBillBtn.addEventListener('click',printBill);
